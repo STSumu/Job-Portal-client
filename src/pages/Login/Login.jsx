@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Lottie from "lottie-react";
 import login from "../../assets/login.json";
 import AuthContext from "../../context/AuthContext/AuthContext";
+import SocialLogin from "../shared/SocialLogin";
 
 const Login = () => {
   const {loginUser}=useContext(AuthContext);
@@ -25,7 +26,7 @@ const Login = () => {
           <Lottie animationData={login} loop={true} />
         </div>
         <div className="card w-full md:w-1/2 shrink-0">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold mb-6">Login now!</h1>
           <div className="text-start">
             <form
               className="*:w-full *:flex *:flex-col space-y-6"
@@ -52,8 +53,9 @@ const Login = () => {
               <div>
                 <a className="link link-hover">Forgot password?</a>
               </div>
-              <button className="btn btn-neutral mt-4">Login</button>
+              <button className="btn btn-neutral text-black border-0 bg-[#87eafb] mt-4">Login</button>
             </form>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

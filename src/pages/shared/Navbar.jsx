@@ -56,8 +56,8 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <img className="w-15" src={logo} alt="" />
-        <a className="btn btn-ghost text-xl"><strong className='font-stretch-90%'>Job Portal</strong></a>
+        <img className="w-8 md:w-12" src={logo} alt="" />
+        <a className="btn btn-ghost hidden md:flex text-xl md:text-2xl"><strong className='font-stretch-90%'>Job Portal</strong></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
