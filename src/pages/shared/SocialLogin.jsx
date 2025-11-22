@@ -4,14 +4,14 @@ import fbLogo from '../../assets/fb.png'
 import AuthContext from '../../context/AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const SocialLogin = () => {
+const SocialLogin = ({from}) => {
     const navigate=useNavigate();
     const {googleLogin,fbLogin}=useContext(AuthContext);
     const handleGoogleLogin=()=>{
           googleLogin()
           .then((result)=>{
             console.log(result);
-            navigate('/');
+            navigate(from);
           })
           .catch((err)=>{
             console.log(err.message);
@@ -21,7 +21,7 @@ const SocialLogin = () => {
           fbLogin()
           .then((result)=>{
             console.log(result);
-            navigate('/');
+            navigate(from);
           })
           .catch((err)=>{
             console.log(err.message);

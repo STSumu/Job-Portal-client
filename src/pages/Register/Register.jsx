@@ -3,9 +3,11 @@ import Lottie from "lottie-react";
 import register from "../../assets/register.json";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import SocialLogin from "../shared/SocialLogin";
+import { useLocation } from "react-router-dom";
 
 const Register = () => {
   const {createUser}=useContext(AuthContext);
+  const from=useLocation()?.state;
   const handleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -58,7 +60,7 @@ const Register = () => {
               </div>
               <button className="btn btn-neutral text-black border-0 bg-[#87eafb] mt-4">Register</button>
             </form>
-            <SocialLogin></SocialLogin>
+            <SocialLogin from={from}></SocialLogin>
           </div>
         </div>
       </div>
